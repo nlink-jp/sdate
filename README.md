@@ -29,16 +29,16 @@ With Go and Make installed, build the tool by running the following command.
 make build
 ```
 
-This will create the `sdate` executable in the current directory.
+This will create the `sdate` executable in the `dist/` directory.
 
-For cross-compilation or creating a macOS universal binary, use the following commands:
+For cross-compilation and packaging for all platforms, use the following commands:
 
 ```sh
-# Build for Linux, Windows, and macOS (Intel)
-make release
+# Cross-compile for Linux (amd64/arm64), macOS (amd64/arm64), and Windows (amd64)
+make build-all
 
-# Create a macOS universal binary (Apple Silicon + Intel)
-make universal-mac
+# Build all binaries and create .zip archives in dist/
+make package
 ```
 
 ## Usage
