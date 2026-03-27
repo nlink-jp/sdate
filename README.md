@@ -23,7 +23,11 @@
 
 ## Installation
 
-With Go and Make installed, build the tool by running the following command.
+Pre-compiled binaries for macOS, Windows, and Linux are available on the [Releases](https://github.com/nlink-jp/sdate/releases) page.
+
+## Building
+
+To build from source, you need Go and Make installed.
 
 ```sh
 make build
@@ -31,7 +35,7 @@ make build
 
 This will create the `sdate` executable in the `dist/` directory.
 
-For cross-compilation and packaging for all platforms, use the following commands:
+For cross-compilation and packaging for all platforms:
 
 ```sh
 # Cross-compile for Linux (amd64/arm64), macOS (amd64/arm64), and Windows (amd64)
@@ -39,6 +43,12 @@ make build-all
 
 # Build all binaries and create .zip archives in dist/
 make package
+```
+
+To run the tests:
+
+```sh
+make test
 ```
 
 ## Usage
@@ -115,12 +125,3 @@ The basic usage is as follows:
 ./sdate --format 'YYYY-MM-DD hh:mm:ss ZZZ'
 ```
 
-## Development
-
-### Testing
-
-To run the tests, use the following command:
-
-```sh
-make test
-```

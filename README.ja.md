@@ -22,11 +22,7 @@
 
 ## インストール
 
-Goがインストールされている環境で、以下のコマンドを実行してビルドします。
-
-```sh
-go build -o sdate
-```
+macOS、Windows、Linux向けのコンパイル済みバイナリは[リリースページ](https://github.com/nlink-jp/sdate/releases)から入手できます。
 
 ## 使用方法
 
@@ -72,6 +68,32 @@ go build -o sdate
 -   `TZ`: タイムゾーンの略称（例: JST）
 -   `ZZ`: タイムゾーンオフセット（例: +09:00）
 -   `ZZZ`: タイムゾーンオフセット（例: +0900）
+
+## ビルド
+
+ソースからビルドするには、GoとMakeがインストールされている必要があります。
+
+```sh
+make build
+```
+
+`dist/` ディレクトリに `sdate` 実行ファイルが生成されます。
+
+全プラットフォーム向けのクロスコンパイルとパッケージング:
+
+```sh
+# Linux (amd64/arm64)、macOS (amd64/arm64)、Windows (amd64) 向けにクロスコンパイル
+make build-all
+
+# 全バイナリをビルドし、dist/ に .zip アーカイブを作成
+make package
+```
+
+テストを実行するには:
+
+```sh
+make test
+```
 
 ## 使用例
 
