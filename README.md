@@ -38,7 +38,7 @@ This will create the `sdate` executable in the `dist/` directory.
 For cross-compilation and packaging for all platforms:
 
 ```sh
-# Cross-compile for Linux (amd64/arm64), macOS (amd64/arm64), and Windows (amd64)
+# Cross-compile for Linux (amd64/arm64), macOS (arm64), and Windows (amd64)
 make build-all
 
 # Build all binaries and create .zip archives in dist/

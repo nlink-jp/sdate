@@ -82,7 +82,7 @@ make build
 全プラットフォーム向けのクロスコンパイルとパッケージング:
 
 ```sh
-# Linux (amd64/arm64)、macOS (amd64/arm64)、Windows (amd64) 向けにクロスコンパイル
+# Linux (amd64/arm64)、macOS (arm64)、Windows (amd64) 向けにクロスコンパイル
 make build-all
 
 # 全バイナリをビルドし、dist/ に .zip アーカイブを作成
