@@ -32,7 +32,7 @@ func parseInput(input string) (*SplunkLikeTimeSpec, error) {
 	// Examples: -1d@d, @d-1d, +5h
 	re := regexp.MustCompile(`^((?P<rel>[\+\-]\d+[smhdwMy])|(?P<snap>@[smhdwMy]))?((?P<op>[\+\-]\d+[smhdwMy])|(?P<snap2>@[smhdwMy]))?$`) // Added $ to match the whole string
 	matches := re.FindStringSubmatch(input)
-	if matches == nil || len(matches) < 6 {
+	if len(matches) < 6 {
 		return nil, ErrInvalidFormat
 	}
 
